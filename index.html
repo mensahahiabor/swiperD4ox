@@ -25,6 +25,7 @@ body{
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
 /* Header */
@@ -43,7 +44,7 @@ header{
 
 .logo{
   font-family:'Bebas Neue';
-  font-size:6rem;
+  font-size:3rem;
   background:linear-gradient(100deg,var(--primary),var(--accent));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -241,12 +242,16 @@ footer h2{
 <header>
   <div class="logo">SWIPERD4OX</div>
   <nav>
+    <a href="#home" class="btn-outline">HOME</a>
+    <a href="#about" class="btn-outline">ABOUT US</a>
+    <a href="#contact" class="btn-outline">CONTACT</a>
     <a href="#" class="btn-outline">TELEGRAM</a>
     <a href="#" class="btn-primary">BUY NOW</a>
   </nav>
 </header>
 
-<section class="hero">
+<!-- Home Section -->
+<section id="home" class="hero">
   <div class="hero-content">
     <h1>SWIPERD4OX 🚀</h1>
     <p>THE VAULT IS OPEN — JOIN THE HEIST</p>
@@ -267,6 +272,26 @@ footer h2{
   </div>
 </section>
 
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">ABOUT US</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>OUR MISSION</h3>
+      <p>SWIPERD4OX is all about stealth, strategy, and community-driven growth. We aim to take our holders to the moon with zero hassle and maximum transparency.</p>
+    </div>
+    <div class="feature">
+      <h3>OUR VISION</h3>
+      <p>Building a crypto project with a strong community foundation, viral growth, and long-term sustainability.</p>
+    </div>
+    <div class="feature">
+      <h3>OUR VALUES</h3>
+      <p>Transparency, fairness, innovation, and community-first approach are at the heart of SWIPERD4OX.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why Swiper Section -->
 <section>
   <h2 class="section-title">WHY SWIPER?</h2>
   <div class="features">
@@ -288,14 +313,35 @@ footer h2{
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">JOIN THE NETWORK</h2>
+<!-- Social Section -->
+<section id="contact">
+  <h2 class="section-title">CONTACT & JOIN THE NETWORK</h2>
   <div class="social">
-    <a href="#"><i class="fab fa-telegram"></i><br>Telegram</a>
-    <a href="#"><i class="fab fa-twitter"></i><br>Twitter</a>
-    <a href="#"><i class="fab fa-discord"></i><br>Discord</a>
-    <a href="#"><i class="fas fa-chart-line"></i><br>DexTools</a>
-    <a href="#"><i class="fas fa-coins"></i><br>CMC</a>
+
+    <a href="http://t.me/SwiperD4ox" target="_blank" rel="noopener">
+      <i class="fab fa-telegram"></i><br>Telegram
+    </a>
+
+    <a href="http://twitter.com/SwiperD4ox" target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i><br>Twitter (X)
+    </a>
+
+    <a href="http://www.tiktok.com/@swiperd4ox" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok"></i><br>TikTok
+    </a>
+
+    <a href="https://discord.gg/YOUR_INVITE_CODE" target="_blank" rel="noopener">
+      <i class="fab fa-discord"></i><br>Discord
+    </a>
+
+    <a href="https://www.dextools.io/app/en/ether/pair-explorer/YOUR_PAIR_ADDRESS" target="_blank" rel="noopener">
+      <i class="fas fa-chart-line"></i><br>DexTools
+    </a>
+
+    <a href="https://coinmarketcap.com/currencies/YOUR_TOKEN_NAME" target="_blank" rel="noopener">
+      <i class="fas fa-coins"></i><br>CoinMarketCap
+    </a>
+
   </div>
 </section>
 
