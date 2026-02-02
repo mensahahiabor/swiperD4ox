@@ -86,14 +86,14 @@ nav a:hover{
 
 /* Hero */
 .hero{
- height:120vh;
+  height:120vh;
   background:url('images/swiper1.jpg') center/cover no-repeat;
   display:flex;
-  align-items:center;
+  align-items:flex-end; /* drop content to bottom */
   justify-content:center;
   position:relative;
   text-align:center;
-  padding:0 1rem;
+  padding:0 1rem 5rem; /* bottom padding for spacing */
 }
 
 .hero::before{
@@ -142,39 +142,43 @@ nav a:hover{
   text-align:center;
 }
 
-/* Swipe Gains Section Floating */
+/* Launch + Swipe Gains Section */
 .swipe-gains {
-  margin: -3rem 0 1rem; /* pull up over hero, reduce bottom gap to 1rem */
+  margin: -5rem 0 5rem; /* pull over hero, reduce bottom gap */
   text-align: center;
   position: relative;
   z-index: 2;
 }
 
+.launching-text {
+  margin-bottom:0.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem,4vw,4.2rem);
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align:center;
+  text-shadow: 0 0 0px rgba(0,217,255,0.9), 0 0 30px rgba(0,217,255,0.6);
+
+  /* Shift slightly to the right */
+  display: inline-block;
+  transform: translateX(150px); /* adjust value as needed */
+}
+
 .gains-container {
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   gap: 10rem;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .gains-container span {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem,2vw,4rem);
+  font-family:'Bebas Neue', sans-serif;
+  font-size: clamp(4rem,4vw,4rem);
   color: var(--primary);
   letter-spacing: 2px;
-  text-shadow: 0 0 0px rgba(255,107,53,0.8);
-  position: relative;
-  top: 0rem; /* keeps the words floating above hero */
-}
-
-/* Reduce extra space in stats section */
-section.stats-section {
-  padding-top: 1rem; /* smaller top padding to reduce gap */
-}
-/* Hero adjustment */
-.hero {
-  padding-top: 5rem; /* drop the hero content slightly */
-  padding-bottom: 1rem;
+  text-shadow:0 0 0px rgba(255,107,53,0.8);
 }
 
 /* Sections */
@@ -291,10 +295,10 @@ footer h2{
   .section-title{font-size:2.2rem;}
   .stat h3{font-size:1.5rem;}
   .feature i{font-size:2rem;}
+  .gains-container {gap:2rem;}
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -315,13 +319,14 @@ footer h2{
     <p>THE VAULT IS OPEN — JOIN THE HEIST</p>
     <div class="hero-buttons">
       <a href="https://dexscreener.com/ethereum/YOUR_PAIR_ADDRESS" class="btn-primary" target="_blank" rel="noopener">VIEW CHART</a>
-      <a href="https://example.com/contract address.pdf" class="btn-outline" target="_blank" rel="noopener">CONTRACT ADDRESS</a>
+      <a href="https://example.com/contract_address.pdf" class="btn-outline" target="_blank" rel="noopener">CONTRACT ADDRESS</a>
     </div>
   </div>
 </section>
 
-<!-- Swipe Gains Section -->
+<!-- Launch + Swipe Gains Section -->
 <section class="swipe-gains">
+  <p class="launching-text">Launching Soon! Watch This Space!!!</p>
   <div class="gains-container">
     <span>SWIPE</span>
     <span>BIG</span>
@@ -331,30 +336,28 @@ footer h2{
 
 <!-- Mission Stats Section -->
 <section class="stats-section">
-  
   <div class="stats">
     <div class="stat"><p>TAX</p><h3>0%</h3></div>
     <div class="stat"><p>LIQUIDITY</p><h3>BURNED</h3></div>
     <div class="stat"><p>CONTRACT</p><h3>RENOUNCED</h3></div>
-    <div class="stat"><p>MCAP</p><h3>$4.2M</h3></div>
   </div>
 </section>
+
 <!-- About Section -->
 <section id="about">
   <h2 class="section-title">ABOUT US</h2>
   <div class="features">
     <div class="feature">
       <h3>OUR MISSION</h3>
-      <p>We are all about strategy and community growth. Our aim is to take our holder to the moon with zero hassle.
-.</p>
+      <p>We are all about strategy and community growth. Our aim is to take our holders to the moon with zero hassle.</p>
     </div>
     <div class="feature">
       <h3>OUR VISION</h3>
-      <p>Building a strong crypto community with strong foundation, long term sustainability and viral growth..</p>
+      <p>Building a strong crypto community with a solid foundation, long term sustainability, and viral growth.</p>
     </div>
     <div class="feature">
       <h3>OUR VALUES</h3>
-      <p>Fairness, transparency and community-first are at the helm of our core values.</p>
+      <p>Fairness, transparency, and community-first are at the helm of our core values.</p>
     </div>
   </div>
 </section>
@@ -385,37 +388,17 @@ footer h2{
 <section id="contact">
   <h2 class="section-title">CONTACT & JOIN THE NETWORK</h2>
   <div class="social">
-
-    <a href="https://t.me/SwiperD4ox" target="_blank" rel="noopener">
-      <i class="fab fa-telegram"></i><br>Telegram
-    </a>
-
-    <a href="https://twitter.com/SwiperfoxSol" target="_blank" rel="noopener">
-  <i class="fab fa-x-twitter"></i><br>Twitter
-</a>
-
-    <a href="https://www.tiktok.com/@swiperd4ox" target="_blank" rel="noopener">
-      <i class="fab fa-tiktok"></i><br>TikTok
-    </a>
-
-    <a href="https://discord.gg/YOUR_INVITE_CODE" target="_blank" rel="noopener">
-      <i class="fab fa-discord"></i><br>Discord
-    </a>
-
-    <a href="https://dexscreener.com/ethereum/YOUR_PAIR_ADDRESS" target="_blank" rel="noopener">
-      <i class="fas fa-chart-line"></i><br>DexScreener
-    </a>
-
-    <a href="https://coinmarketcap.com/currencies/YOUR_TOKEN_NAME" target="_blank" rel="noopener">
-      <i class="fas fa-coins"></i><br>CoinMarketCap
-    </a>
-
+    <a href="https://t.me/SwiperD4ox" target="_blank" rel="noopener"><i class="fab fa-telegram"></i><br>Telegram</a>
+    <a href="https://twitter.com/SwiperfoxSol" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i><br>Twitter</a>
+    <a href="https://www.tiktok.com/@swiperd4ox" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i><br>TikTok</a>
+    <a href="https://dexscreener.com/ethereum/YOUR_PAIR_ADDRESS" target="_blank" rel="noopener"><i class="fas fa-chart-line"></i><br>DexScreener</a>
+    <a href="https://coinmarketcap.com/currencies/YOUR_TOKEN_NAME" target="_blank" rel="noopener"><i class="fas fa-coins"></i><br>CoinMarketCap</a>
   </div>
 </section>
 
 <footer>
   <h2>$WIPERD4OX</h2>
-  <p>© 2026 | NO FINANCIAL ADVICE | BUILT FOR THE BOLD</p>
+  <p>© 2026 | NO FINANCIAL ADVICE | BUILT FOR FUN AND ENTERTAINMENT</p>
 </footer>
 
 </body>
